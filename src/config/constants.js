@@ -111,6 +111,7 @@ export const SKILLS = [
     { name: 'CSS', percentage: 95, category: 'Frontend' },
     { name: 'Bootstrap', percentage: 95, category: 'Frontend' },
     { name: 'Responsive Design', percentage: 95, category: 'Frontend' },
+    { name: 'Typescript', percentage: 95, category: 'Backend' },
     { name: 'Javascript', percentage: 95, category: 'Backend' },
     { name: 'Node.js', percentage: 90, category: 'Backend' },
     { name: 'React.js', percentage: 88, category: 'Frontend' },
