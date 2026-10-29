@@ -43,5 +43,5 @@ export const scrollToSection = (sectionId, offset = 80) => {
  * @returns {Array} - Array of section IDs
  */
 export const getSectionIds = () => {
-    return ['home', 'about', 'experience', 'projects', 'services'];
+    return ['home', 'about', 'experience', 'projects', 'services','contact'];
 };

@@ -261,4 +261,5 @@ export const ROUTES = {
     experience: '/experience',
     projects: '/projects',
     services: '/services',
+    contact: '/contact',
 };

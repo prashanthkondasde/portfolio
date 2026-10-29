@@ -21,9 +21,9 @@ const MobileDrawer = ({ isOpen, onClose }) => {
   const socialIcons = [
     { icon: FaLinkedin, url: SOCIAL_LINKS.linkedin, label: 'LinkedIn' },
     { icon: FaGithub, url: SOCIAL_LINKS.github, label: 'GitHub' },
-    { icon: FaTwitter, url: SOCIAL_LINKS.twitter, label: 'Twitter' },
-    { icon: FaInstagram, url: SOCIAL_LINKS.instagram, label: 'Instagram' },
-    { icon: FaFacebook, url: SOCIAL_LINKS.facebook, label: 'Facebook' },
+    // { icon: FaTwitter, url: SOCIAL_LINKS.twitter, label: 'Twitter' },
+    // { icon: FaInstagram, url: SOCIAL_LINKS.instagram, label: 'Instagram' },
+    // { icon: FaFacebook, url: SOCIAL_LINKS.facebook, label: 'Facebook' },
     { icon: FaEnvelope, url: `mailto:${SOCIAL_LINKS.email}`, label: 'Email' },
   ];
 
