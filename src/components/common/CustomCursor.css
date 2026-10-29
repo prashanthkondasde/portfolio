@@ -1,0 +1,101 @@
+/* Custom Cursor Styles - Neon Cyberpunk Theme */
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+    cursor: none !important;
+}
+
+a, button, [role="button"], input, textarea, select {
+    cursor: none !important;
+}
+
+/* Cursor dot - Neon cyan */
+.cursor-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #00D4FF;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.8), 0 0 16px rgba(0, 212, 255, 0.4);
+}
+
+/* Cursor ring - Neon */
+.cursor-ring {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid rgba(0, 212, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease-out;
+    will-change: width, height;
+}
+
+/* Hovering state */
+.custom-cursor.hovering .cursor-ring {
+    width: 35px;
+    height: 35px;
+    border-color: rgba(139, 92, 246, 0.7);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.custom-cursor.hovering .cursor-dot {
+    background: #8B5CF6;
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Clicking state */
+.custom-cursor.clicking .cursor-ring {
+    width: 26px;
+    height: 26px;
+    border-width: 2px;
+    border-color: rgba(236, 72, 153, 0.8);
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+.custom-cursor.clicking .cursor-dot {
+    background: #EC4899;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Trail particles - Neon */
+.cursor-trail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9998;
+    animation: fade-out 0.4s ease-out forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+/* Mobile/Touch devices - restore default cursor */
+@media (hover: none) and (pointer: coarse) {
+    * {
+        cursor: auto !important;
+    }
+
+    .custom-cursor,
+    .cursor-trail {
+        display: none;
+    }
+}
